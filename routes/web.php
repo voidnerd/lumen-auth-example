@@ -18,8 +18,8 @@ $router->get('/', function () use ($router) {
 
 // API route group
 $router->group(['prefix' => 'api'], function () use ($router) {
-
-    $router->post('register', 'AuthController@register'); // Matches "/api/register
-    
+    // Matches "/api/register
+   $router->post('register', 'AuthController@register');
+     // Matches "/api/login
+    $router->post('login', 'AuthController@login');
 });
-
